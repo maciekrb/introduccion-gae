@@ -24,7 +24,7 @@ class MainPage(webapp2.RequestHandler):
     Atiende solicitudes con el método GET
     """
     self.response.headers['Content-Type'] = 'text/plain'
-    self.response.write('Hola Mundo: Solicitud GET')
+    self.response.write('Hola Mundo: Solicitud GET %s' % self.request.GET)
 
   def post(self):
     """
