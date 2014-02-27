@@ -5,9 +5,7 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /assets
-  static_dir: static
-
 - url: /.*
-  script: main.app
+  upload: index.html
+  static_files: index.html
 

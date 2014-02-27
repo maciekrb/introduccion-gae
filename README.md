@@ -9,19 +9,28 @@ Autores
 Contenido el curso
 ------------------
 
-### Lección 1 -- Google App Engine: tus aplicaciones sobre la plataforma auto-escalable de Google
+En este repositorio encontrarás varias carpetas que te llevarán paso a paso por el proceso de desarrollo
+de la aplicación del Censo de Paco. Crea tu aplicación en Google App Engine y experimenta con cada una
+de las versiones de la aplicación.
 
-#### Objetivo Lección: 
-Al finalizar esta lección el alumno será capaz de entender los beneficios de correr una aplicación en la plataforma (PaaS) de Google App Engine comparado con una aplicación tradicional.
+### 01-langing-page 
 
-#### Subtemas:
-  - Desarrollo de aplicaciones sin App Engine. 
-  - Que es GAE ? Que problemas resuelve ? 
-  - Como se compara GAE con el enfoque tradicional. 
-  - Vuelo de reconocimiento: Servicios y componentes de GAE que vamos a utilizar . 
-  - Cómo funciona GAE? (Tipos de instancias, estrategia de escalamiento)
-  - Componentes báse de una aplicación
-    - app.yaml
-    - main.py
-    - directorio de archivos estáticos
+Paco está listo para subir el landing page de la aplicación del censo para probar que todo funciona 
+correctamente. Esta aplicación presenta los componentes mínimos de una aplicación sobre Google App
+Engine.
 
+### 02-censo-webapp2-p1
+
+Paco debe incluir un par de imágenes en el landing page del censo. Para esto debe crear algunos "Handlers",
+y comenzar a planear como va a construir su aplicación.
+
+### 03-censo-webapp2-p2
+
+Paco comienza a implementar los handlers específicos para cada parte de la aplicación. En principio, 
+estos sólamente le presentan el código HTML necesario en cada sección.
+
+
+### 04-censo-jinja2
+
+Paco hace un pequeño refactor de la aplicación, a fin de que todo el código HTML quede separado del
+flujo lógico dentro del handler ...
