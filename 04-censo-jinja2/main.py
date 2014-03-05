@@ -8,6 +8,7 @@ Documentación: http://webapp-improved.appspot.com/
 
 """
 from datetime import date
+import logging
 import os
 import jinja2
 import webapp2
@@ -44,10 +45,15 @@ class IdentityPage(webapp2.RequestHandler):
     """
     Atiende solicitudes con el método POST
     """
-    self.response.write('Hola Mundo: Solicitud POST %s' % self.request.POST)
-    self.response.write("""
-
-    """)
+    logging.info('Hola Mundo: Solicitud POST %s' % self.request.POST)
+    template = JINJA_ENVIRONMENT.get_template('identity_success.html')
+    self.response.write(template.render({
+        'doc_type': self.TIPOS_DOCUMENTOS[self.request.POST['doc_type']],
+        'doc_number': self.request.POST['doc_number'],
+        'email': self.request.POST['email'],
+        'true_info_check': True if self.request.POST['true_info_check'] ==
+                                   'on' else False,
+    }))
 
 
 class QuestionPage(webapp2.RequestHandler):
