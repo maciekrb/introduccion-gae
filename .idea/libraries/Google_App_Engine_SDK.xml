@@ -7,6 +7,7 @@
       <root url="file:///usr/local/google_appengine/lib/cacerts" />
       <root url="file:///usr/local/google_appengine/lib/cherrypy" />
       <root url="file:///usr/local/google_appengine/lib/concurrent" />
+      <root url="file:///usr/local/google_appengine/lib/docker" />
       <root url="file:///usr/local/google_appengine/lib/endpoints-1.0" />
       <root url="file:///usr/local/google_appengine/lib/enum" />
       <root url="file:///usr/local/google_appengine/lib/fancy_urllib" />
@@ -25,10 +26,13 @@
       <root url="file:///usr/local/google_appengine/lib/pyasn1" />
       <root url="file:///usr/local/google_appengine/lib/pyasn1_modules" />
       <root url="file:///usr/local/google_appengine/lib/python-gflags" />
+      <root url="file:///usr/local/google_appengine/lib/requests" />
       <root url="file:///usr/local/google_appengine/lib/rsa" />
       <root url="file:///usr/local/google_appengine/lib/setuptools-0.6c11" />
       <root url="file:///usr/local/google_appengine/lib/simplejson" />
+      <root url="file:///usr/local/google_appengine/lib/six" />
       <root url="file:///usr/local/google_appengine/lib/sqlcmd" />
+      <root url="file:///usr/local/google_appengine/lib/websocket" />
       <root url="file:///usr/local/google_appengine/lib/django-1.5" />
       <root url="file:///usr/local/google_appengine/lib/webapp2-2.5.2" />
       <root url="file:///usr/local/google_appengine/lib/webob-1.2.3" />

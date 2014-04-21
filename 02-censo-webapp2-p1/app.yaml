@@ -11,4 +11,3 @@ handlers:
 - url: /.*
   upload: index.html
   static_files: index.html
-
