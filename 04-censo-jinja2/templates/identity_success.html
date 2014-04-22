@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-      <html lang="es">
-        <head>
-          <meta charset='utf-8'>
-          <title>Censo Local -- Identificación</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-          <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        </head>
-        <body>
-          <div class="container">
-
-                Gracias
-          </div>
-        </body>
-      </html>
+{% extends "base.html" %}
+{% block titulo%}Confirmación{% endblock%}
+{% block contenido%}
+  {% if true_info_check %}
+    <div class="alert alert-success">Gracias, los datos han sido registrados correctamente!</div>
+  {% else %}
+    <div class="alert alert-danger">Lo sentimos! Debes confirmar la veracidad y actualidad de los datos. <a href='/identity'>Volver</a></div>
+  {% endif %}
+{% endblock%}

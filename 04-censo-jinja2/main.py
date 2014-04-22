@@ -10,25 +10,26 @@ Documentación: http://webapp-improved.appspot.com/
 from datetime import date
 import logging
 import os
-import jinja2
 import webapp2
+import jinja2
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader('%s/templates' % os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+
 class IdentityPage(webapp2.RequestHandler):
   """
   Handler principal de la aplicación
 
   Define los métodos que atenderán las solicitudes
-  que se hagan a la raiz del sitio ("/")
+  que se hagan a la ruta "/identity"
   """
   TIPOS_DOCUMENTOS = {
-    '1': u"Cedula de Ciudadanía",
-    '2': u"Cedula de Extranjería",
-    '3': u"Tarjeta de Identidad"
+    '1': u"Cédula de Ciudadanía",
+    '2': u"Tarjeta de Identidad",
+    '3': u"Cédula de Extranjería",
   }
 
   def get(self):
@@ -45,13 +46,12 @@ class IdentityPage(webapp2.RequestHandler):
     """
     Atiende solicitudes con el método POST
     """
-    logging.info('Hola Mundo: Solicitud POST %s' % self.request.POST)
     template = JINJA_ENVIRONMENT.get_template('identity_success.html')
     self.response.write(template.render({
-        'doc_type': self.TIPOS_DOCUMENTOS[self.request.POST['doc_type']],
+        'doc_type': self.TIPOS_DOCUMENTOS.get(self.request.POST['doc_type']),
         'doc_number': self.request.POST['doc_number'],
         'email': self.request.POST['email'],
-        'true_info_check': True if self.request.POST['true_info_check'] ==
+        'true_info_check': True if self.request.POST.get('true_info_check') ==
                                    'on' else False,
     }))
 
